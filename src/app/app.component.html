@@ -24,22 +24,41 @@
           <mat-divider></mat-divider>
           <mat-card-content>
             <td-data-table
-              [data]="basicData"
-              [columns]="configWidthColumns">
+              [data]="marketData"
+              [columns]="configWidthColumns"
+              [style.height.px]="300">
               <ng-template tdDataTableTemplate="img" let-value="value">
                 <img [src]="value"/>
               </ng-template>
             </td-data-table>
           </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions class="view-more-button">
+            <a mat-button color="accent" class="text-upper" [routerLink]="['/logs']">
+              <span>See All Results</span>
+            </a>
+          </mat-card-actions>
         </mat-card>
 
         <mat-card tdMediaToggle="gt-xs" [mediaClasses]="['push-top']">
           <mat-card-title>Stock Market News</mat-card-title>
           <mat-card-subtitle>The latest breaking news from Wall Street</mat-card-subtitle>
           <mat-divider></mat-divider>
-          <mat-card-content>
-            card content
-          </mat-card-content>
+          <mat-nav-list>
+            <li *ngFor="let story of stories; let i = index">
+              <a mat-list-item>
+                <h3 matLine>{{story.headline}}</h3>
+                <p matLine>{{story.timestamp}} - {{story.source}}</p>
+              </a>
+              <mat-divider md-inset *ngIf="!last"></mat-divider>
+            </li>
+          </mat-nav-list>
+          <mat-divider></mat-divider>
+          <mat-card-actions class="view-more-button">
+            <a mat-button color="accent" class="text-upper" [routerLink]="['/logs']">
+              <span>View More</span>
+            </a>
+          </mat-card-actions>
         </mat-card>
       </div>
 
@@ -58,7 +77,7 @@
             </li>
           </mat-nav-list>
           <mat-divider></mat-divider>
-          <mat-card-actions>
+          <mat-card-actions class="view-more-button">
             <a mat-button color="accent" class="text-upper" [routerLink]="['/logs']">
               <span>View More</span>
             </a>

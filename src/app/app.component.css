@@ -1,3 +1,11 @@
 p {
   font-family: Lato;
 }
+
+li {
+    list-style-type: none;
+}
+
+.view-more-button {
+  text-align: right;
+}
