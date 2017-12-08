@@ -16,6 +16,9 @@
       <mat-icon>menu</mat-icon>
     </button>
 
+    <router-outlet></router-outlet>
+    
+
     <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
       <div flex-gt-sm="60">
         <mat-card>
@@ -55,6 +58,9 @@
           </mat-nav-list>
           <mat-divider></mat-divider>
           <mat-card-actions class="view-more-button">
+            <a mat-button color="accent" class="text-upper" routerLink="/news-form">
+              <span>Submit News Story</span>
+            </a>
             <a mat-button color="accent" class="text-upper" [routerLink]="['/logs']">
               <span>View More</span>
             </a>

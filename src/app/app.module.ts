@@ -18,6 +18,11 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
          CovalentStepsModule, CovalentLoadingModule, CovalentDialogsModule, CovalentSearchModule, CovalentPagingModule,
          CovalentNotificationsModule, CovalentMenuModule, CovalentDataTableModule, CovalentMessageModule } from '@covalent/core';
 
+import { NewsFormComponent } from './news-form/news-form.component';
+
+import { AppRoutingModule } from './app-routing.module';
+
+
 @NgModule({
   imports:      [
     BrowserModule,
@@ -64,8 +69,9 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
     CovalentMenuModule,
     CovalentDataTableModule,
     CovalentMessageModule,
+    AppRoutingModule,
     ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent, HelloComponent, NewsFormComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
