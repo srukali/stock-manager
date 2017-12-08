@@ -19,6 +19,7 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
          CovalentNotificationsModule, CovalentMenuModule, CovalentDataTableModule, CovalentMessageModule } from '@covalent/core';
 
 import { NewsFormComponent } from './news-form/news-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -71,7 +72,12 @@ import { AppRoutingModule } from './app-routing.module';
     CovalentMessageModule,
     AppRoutingModule,
     ],
-  declarations: [ AppComponent, HelloComponent, NewsFormComponent ],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    NewsFormComponent,
+    DashboardComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

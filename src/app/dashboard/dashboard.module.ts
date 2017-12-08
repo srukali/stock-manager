@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewsFormComponent } from './news-form.component';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [NewsFormComponent]
+  declarations: [DashboardComponent]
 })
-export class NewsFormModule { }
+export class DashboardModule { }
