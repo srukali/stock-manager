@@ -18,3 +18,7 @@
 .form-container .mat-radio-button {
   margin: 0 5px;
 }
+
+.content-textarea {
+  width: 500px;
+}

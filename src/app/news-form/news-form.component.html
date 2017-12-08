@@ -1,13 +1,6 @@
 <td-layout>
   <td-navigation-drawer flex [sidenavTitle]="name" name="Katelyn Smith - Analyst" email="katelyn.smith@stockwizard.com">
-    <mat-nav-list>
-      <a *ngFor="let item of routes" mat-list-item><mat-icon>{{item.icon}}</mat-icon>{{item.title}}</a>
-    </mat-nav-list>
-
     <div td-navigation-drawer-menu>
-      <mat-nav-list>
-        <a *ngFor="let item of usermenu" mat-list-item><mat-icon>{{item.icon}}</mat-icon>{{item.title}}</a>
-      </mat-nav-list>
     </div>
   </td-navigation-drawer>
 
@@ -22,25 +15,21 @@
 
       <mat-divider></mat-divider>
       <mat-card-content>
-
         <form class="form-container">
           <td-steps>
-            <td-step #step1 label="Add a Headline" sublabel="Make sure it's eye-grabbing." [active]="true" [disabled]="disabled" (activated)="activeStep1Event()" (deactivated)="deactiveStep1Event()">
+            <td-step #step1 label="Add a Headline" sublabel="Make sure it's eye-grabbing.">
               <mat-form-field>
                 <input matInput placeholder="Headline">
               </mat-form-field>
-              <mat-form-field>
-                <input matInput placeholder="Subline">
-              </mat-form-field>
             </td-step>
-            <td-step #step2 label="Add a Source" sublabel="Give credit where credit is due." [state]="stateStep2" [disabled]="disabled" disableRipple>
+            <td-step #step2 label="Add a Source" sublabel="Give credit where credit is due.">
               <mat-form-field>
                 <input matInput placeholder="Author or Source">
               </mat-form-field>
             </td-step>
-            <td-step #step3 label="Add Content" sublabel="Keep it short and sweet." [state]="stateStep3" [disabled]="disabled">
-              <mat-form-field>
-                <textarea matInput placeholder="Content" required></textarea>
+            <td-step #step3 label="Add Content" sublabel="Keep it short and sweet.">
+              <mat-form-field  class="content-textarea">
+                <textarea matInput matTextareaAutosize placeholder="Content"></textarea>
               </mat-form-field>
             </td-step>
           </td-steps>
@@ -50,29 +39,6 @@
             </a>
           </mat-card-actions>
         </form>
-
-        <!-- <form class="form-container">
-          <mat-form-field>
-            <input matInput placeholder="Title" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <input matInput placeholder="Author">
-          </mat-form-field>
-
-          <mat-form-field>
-            <textarea matInput placeholder="Content" required></textarea>
-          </mat-form-field>
-
-          <mat-card-actions class="submit-button">
-            <a mat-button color="accent" class="text-upper" routerLink="/dashboard">
-              <span>Submit</span>
-            </a>
-          </mat-card-actions>
-        </form> -->
-
-
-
       </mat-card-content>
     </td-layout-card-over>
 
