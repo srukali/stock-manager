@@ -1,3 +1,86 @@
-<p>
-  news-form works!
-</p>
+<td-layout>
+  <td-navigation-drawer flex [sidenavTitle]="name" name="Katelyn Smith - Analyst" email="katelyn.smith@stockwizard.com">
+    <mat-nav-list>
+      <a *ngFor="let item of routes" mat-list-item><mat-icon>{{item.icon}}</mat-icon>{{item.title}}</a>
+    </mat-nav-list>
+
+    <div td-navigation-drawer-menu>
+      <mat-nav-list>
+        <a *ngFor="let item of usermenu" mat-list-item><mat-icon>{{item.icon}}</mat-icon>{{item.title}}</a>
+      </mat-nav-list>
+    </div>
+  </td-navigation-drawer>
+
+  <td-layout-nav [toolbarTitle]="name" navigationRoute="/">
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <td-layout-card-over>
+      <mat-card-title>Submit a News Story</mat-card-title>
+      <mat-card-subtitle>Got some breaking news or a hot take? Submit a story to our newsfeed here.</mat-card-subtitle>
+
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+        <form class="form-container">
+          <td-steps>
+            <td-step #step1 label="Add a Headline" sublabel="Make sure it's eye-grabbing." [active]="true" [disabled]="disabled" (activated)="activeStep1Event()" (deactivated)="deactiveStep1Event()">
+              <mat-form-field>
+                <input matInput placeholder="Headline">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Subline">
+              </mat-form-field>
+            </td-step>
+            <td-step #step2 label="Add a Source" sublabel="Give credit where credit is due." [state]="stateStep2" [disabled]="disabled" disableRipple>
+              <mat-form-field>
+                <input matInput placeholder="Author or Source">
+              </mat-form-field>
+            </td-step>
+            <td-step #step3 label="Add Content" sublabel="Keep it short and sweet." [state]="stateStep3" [disabled]="disabled">
+              <mat-form-field>
+                <textarea matInput placeholder="Content" required></textarea>
+              </mat-form-field>
+            </td-step>
+          </td-steps>
+          <mat-card-actions>
+            <a mat-button color="accent" class="text-upper" routerLink="/dashboard">
+              <span>Submit</span>
+            </a>
+          </mat-card-actions>
+        </form>
+
+        <!-- <form class="form-container">
+          <mat-form-field>
+            <input matInput placeholder="Title" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Author">
+          </mat-form-field>
+
+          <mat-form-field>
+            <textarea matInput placeholder="Content" required></textarea>
+          </mat-form-field>
+
+          <mat-card-actions class="submit-button">
+            <a mat-button color="accent" class="text-upper" routerLink="/dashboard">
+              <span>Submit</span>
+            </a>
+          </mat-card-actions>
+        </form> -->
+
+
+
+      </mat-card-content>
+    </td-layout-card-over>
+
+    <td-layout-footer>
+      <div layout="row" layout-align="start center">
+        <span class="md-caption">Made with <mat-icon class="text-md">favorite</mat-icon> using <a href="http://getcovalent.com" class="text-nodecoration tc-blue-700">Covalent</a>, built on Angular v5 + Angular Material.</span>
+      </div>
+    </td-layout-footer>
+
+  </td-layout-nav>
+</td-layout>
