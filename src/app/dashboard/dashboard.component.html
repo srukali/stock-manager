@@ -38,13 +38,10 @@
           <mat-card-subtitle>The latest breaking news from Wall Street</mat-card-subtitle>
           <mat-divider></mat-divider>
           <mat-nav-list>
-            <li *ngFor="let story of stories; let i = index">
-              <a mat-list-item>
-                <h3 matLine>{{story.headline}}</h3>
-                <p matLine>{{story.timestamp}} - {{story.source}}</p>
-              </a>
-              <mat-divider md-inset *ngIf="!last"></mat-divider>
-            </li>
+            <a mat-list-item *ngFor="let story of stories; let i = index">
+              <h3 matLine>{{story.headline}}</h3>
+              <p matLine>{{story.timestamp}} - {{story.source}}</p>
+            </a>
           </mat-nav-list>
           <mat-divider></mat-divider>
           <mat-card-actions class="view-more-button">
@@ -63,14 +60,11 @@
           <mat-card-title>Stock Alerts</mat-card-title>
           <mat-divider></mat-divider>
           <mat-nav-list>
-            <li *ngFor="let alert of alerts; let i = index">
-              <a mat-list-item>
-                <mat-icon matListAvatar color="accent">warning</mat-icon>
-                <h3 matLine>{{alert.symbol}}</h3>
-                <p matLine>{{alert.alert}}</p>
-              </a>
-              <mat-divider md-inset *ngIf="!last"></mat-divider>
-            </li>
+            <a mat-list-item *ngFor="let alert of alerts; let i = index">
+              <mat-icon matListAvatar color="accent">warning</mat-icon>
+              <h3 matLine>{{alert.symbol}}</h3>
+              <p matLine>{{alert.alert}}</p>
+            </a>
           </mat-nav-list>
           <mat-divider></mat-divider>
           <mat-card-actions class="view-more-button">
