@@ -7,7 +7,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 
 import { MatButtonModule, MatListModule, MatIconModule, MatCardModule, MatMenuModule, MatInputModule, MatButtonToggleModule,
          MatProgressSpinnerModule, MatSelectModule, MatSlideToggleModule, MatDialogModule, MatSnackBarModule, MatToolbarModule,
@@ -17,6 +16,12 @@ import { MatButtonModule, MatListModule, MatIconModule, MatCardModule, MatMenuMo
 import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, CovalentExpansionPanelModule,
          CovalentStepsModule, CovalentLoadingModule, CovalentDialogsModule, CovalentSearchModule, CovalentPagingModule,
          CovalentNotificationsModule, CovalentMenuModule, CovalentDataTableModule, CovalentMessageModule } from '@covalent/core';
+
+import { NewsFormComponent } from './news-form/news-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   imports:      [
@@ -64,8 +69,13 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
     CovalentMenuModule,
     CovalentDataTableModule,
     CovalentMessageModule,
+    AppRoutingModule,
     ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [
+    AppComponent,
+    NewsFormComponent,
+    DashboardComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,0 +1,21 @@
+<td-layout>
+  <td-navigation-drawer flex [sidenavTitle]="name" name="Katelyn Smith - Analyst" email="katelyn.smith@stockwizard.com">
+    <div td-navigation-drawer-menu>
+    </div>
+  </td-navigation-drawer>
+
+  <td-layout-nav [toolbarTitle]="name" navigationRoute="/dashboard">
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <router-outlet></router-outlet>
+
+    <td-layout-footer>
+      <div layout="row" layout-align="start center">
+        <span class="md-caption">Made with <mat-icon class="text-md">favorite</mat-icon> using <a href="http://getcovalent.com" class="text-nodecoration tc-blue-700">Covalent</a>, built on Angular v5 + Angular Material.</span>
+      </div>
+    </td-layout-footer>
+
+  </td-layout-nav>
+</td-layout>

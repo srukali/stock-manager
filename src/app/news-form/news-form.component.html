@@ -1,0 +1,32 @@
+<td-layout-card-over>
+  <mat-card-title>Submit a News Story</mat-card-title>
+  <mat-card-subtitle>Got some breaking news or a hot take? Submit a story to our newsfeed here.</mat-card-subtitle>
+
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <form class="form-container">
+      <td-steps>
+        <td-step #step1 label="Add a Headline" sublabel="Make sure it's eye-grabbing.">
+          <mat-form-field>
+            <input matInput placeholder="Headline">
+          </mat-form-field>
+        </td-step>
+        <td-step #step2 label="Add a Source" sublabel="Give credit where credit is due.">
+          <mat-form-field>
+            <input matInput placeholder="Author or Source">
+          </mat-form-field>
+        </td-step>
+        <td-step #step3 label="Add Content" sublabel="Keep it short and sweet.">
+          <mat-form-field  class="content-textarea">
+            <textarea matInput matTextareaAutosize placeholder="Content"></textarea>
+          </mat-form-field>
+        </td-step>
+      </td-steps>
+      <mat-card-actions>
+        <a mat-button color="accent" class="text-upper" routerLink="/dashboard">
+          <span>Submit</span>
+        </a>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</td-layout-card-over>
