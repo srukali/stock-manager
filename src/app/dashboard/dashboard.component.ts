@@ -11,8 +11,6 @@ const DECIMAL_FORMAT: (v: any) => any = (v: number) => v.toFixed(2);
 export class DashboardComponent implements OnInit {
 
   // Mock Data
-  name = 'Stock Wizard';
-
   configWidthColumns: ITdDataTableColumn[] = [
     { name: 'symbol',  label: 'Symbol' },
     { name: 'last', label: 'Last' },

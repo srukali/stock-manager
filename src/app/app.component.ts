@@ -10,6 +10,8 @@ import { TdMediaService } from '@covalent/core';
 })
 export class AppComponent  {
 
+  // Mock Data
+  name = 'Stock Wizard';
 
   constructor(public media: TdMediaService,
               private _iconRegistry: MatIconRegistry,
